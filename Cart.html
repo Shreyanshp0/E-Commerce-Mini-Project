@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Your Cart | ShopNow</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav class="navbar">
+  <div class="logo">ShopNow</div>
+  <div class="nav-search">
+            <input 
+                type="text" 
+                id="searchInput" 
+                placeholder="Search products..."
+                >
+
+        </div>
+        <div id="search-suggestion"></div>
+  <ul class="nav-links">
+    <li><a href="Home.html">Home</a></li>
+    <li>
+      <a href="Cart.html">Cart <span id="cart-count">0</span></a>
+    </li>
+     <li><a href="ContactUs.html">Contact Us</a></li>
+     <li><a href="index.html">Log Out</a></li>
+  </ul>
+</nav>
+
+<div class="container-cart">
+  <h2>Your Cart</h2>
+
+  <div id="cart-items">
+    <!-- Cart items rendered here -->
+  </div>
+
+  <h3>Total: <span id="total">₹0</span></h3>
+
+  <button onclick="openCheckout()">Buy Now</button>
+</div>
+
+<!-- Checkout Modal -->
+<!-- Checkout Modal -->
+<div class="checkout-modal" id="checkout">
+  <span class="close-btn" onclick="closeCheckout()">×</span>
+
+  <h3>Checkout</h3>
+  <input type="email" placeholder="Email" required>
+  <input type="text" placeholder="Address" required>
+  <input type="text" id="card" placeholder="Card Number">
+  <input type="text" id="cvv" placeholder="CVV">
+
+  <button onclick="completePurchase()">Buy</button>
+</div>
+<!-- Thank You Modal -->
+<div class="checkout-modal" id="thank-you">
+  <span class="close-btn" onclick="closeThankYou()">×</span>
+
+  <h3>Thank You 🎉</h3>
+  <p>Your order has been placed successfully.</p>
+  <button onclick="closeThankYou()">Continue Shopping</button>
+</div>
+
+
+<script src="JS/products.js"></script>
+<script src="JS/cartPage.js"></script>
+</body>
+</html>

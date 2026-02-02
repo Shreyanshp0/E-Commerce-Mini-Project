@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>E-Commerce Website</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">ShopNow</div>
+        <div class="nav-search">
+            <input 
+                type="text" 
+                id="searchInput" 
+                placeholder="Search products..."
+
+                >
+        </div>
+        <div id="search-suggestion"></div>
+        <ul class="nav-links">
+            <li><a href="Home.html">Home</a></li>
+            <!-- <li><a href="#">Products</a></li> -->
+            <li><a href="Cart.html">Cart <span id="cart-count">0</span></a></li>    
+            <li><a href="ContactUs.html">Contact Us</a></li>
+            <li><a href="index.html">Log Out</a></li>
+        </ul>
+    </nav>
+    <div class="container has-sidebar">
+
+        <aside class="sidebar">
+            <h3>Categories</h3>
+            <ul>
+                <li><a href="Electronic.html">Electronics</a></li>
+                <li><a href="Fashion.html">Fashion</a></li>
+                <li><a href="books.html">Books</a></li>
+                <li><a href="homePro.html">Home Decoration</a></li>
+                <li><a href="Sports.html">Sports</a></li>
+            </ul>
+            
+            <h3>Filter by Price</h3>
+            <div class="price-filter">
+  <label class="radio-item">
+    <input type="radio" name="price" value="all" checked>
+    <span class="custom-radio"></span>
+    All
+  </label>
+
+  <label class="radio-item">
+    <input type="radio" name="price" value="0-50">
+    <span class="custom-radio"></span>
+    ₹0 – ₹50
+  </label>
+
+  <label class="radio-item">
+    <input type="radio" name="price" value="51-100">
+    <span class="custom-radio"></span>
+    ₹51 – ₹100
+  </label>
+
+  <label class="radio-item">
+    <input type="radio" name="price" value="101-200">
+    <span class="custom-radio"></span>
+    ₹101 – ₹200
+  </label>
+
+  <label class="radio-item">
+    <input type="radio" name="price" value="201-500">
+    <span class="custom-radio"></span>
+    ₹201 – ₹500
+  </label>
+
+  <label class="radio-item">
+    <input type="radio" name="price" value="500+">
+    <span class="custom-radio"></span>
+    ₹500+
+  </label>
+</div>
+
+        </aside> 
+        <div class="product">
+
+        </div>
+    </div>
+    <script src="Js/Search.js"></script>
+    <script src="JS/Product.js"></script>
+    <script src="JS/Cart.js"></script>
+    <script src="JS/cartPage.js"></script>
+    <script src="JS/Category.js"></script>
+</body>
+</html>

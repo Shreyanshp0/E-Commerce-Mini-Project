@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Commerce Website</title>
+    <style>
+    *{
+        box-sizing: border-box;
+        font-family: "Segoe UI", sans-serif;
+    }
+
+    body{
+        margin: 0;
+        height: 100vh;
+        background-color: #F5F7FB;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #loging{
+        background-color: #FFFFFF;
+        padding: 30px;
+        width: 320px;
+        border-radius: 16px;
+        box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        text-align: center;
+    }
+
+    input{
+        width: 100%;
+        padding: 12px;
+        margin-bottom: 15px;
+        border-radius: 10px;
+        border: 1px solid #DADCE0;
+        outline: none;
+        font-size: 14px;
+    }
+
+    input::placeholder{
+        color: #999999;
+    }
+
+    input:focus{
+        border-color: #6C63FF;
+    }
+
+    button{
+        width: 100%;
+        padding: 12px;
+        border-radius: 10px;
+        border: none;
+        background-color: #6C63FF;
+        color: white;
+        font-size: 15px;
+        cursor: pointer;
+        transition: 0.3s;
+    }
+    
+    #logo{
+        position: absolute;
+        top: 40px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        z-index: 2;
+    }
+        .logo{
+            width: 190px;
+            padding: 10px;
+            background-color: white;
+            border-radius: 18px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+
+            
+            transition: 
+                transform 0.6s cubic-bezier(0.4, 0, 0.2, 1),
+                box-shadow 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+    .logo:hover{
+    transform: scale(1.25);
+    }  
+
+
+    #loging{
+        background-color: white;
+        padding: 30px;
+        width: 320px;
+        border-radius: 16px;
+        box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        transition: transform 0.4s ease;
+    }
+
+    #logo:hover + #loging{
+        transform: translateY(40px);
+    }
+    button:hover{
+        background-color: #5848E5;
+    }
+    .logo:hover{
+        transform: scale(1.25);
+        box-shadow: 0 12px 30px rgba(108,99,255,0.4);
+    }
+
+</style>
+
+</head>
+<body>
+    <div id="logo">
+        <img src="Res/Webstite logo square.png" alt="Website Logo" class="logo">
+    </div>
+    <div id="loging">
+        <input type="text" placeholder="User" id="user">
+        <input type="password" placeholder="Password" id="password">
+        <button id="logbt">Login</button>
+    </div>
+    <script>
+        let user=document.querySelector("#user")
+        let password=document.querySelector("#password")
+        let button=document.querySelector("#logbt")
+        button.addEventListener("click",()=>{
+            let uval=user.value
+            let pval=password.value
+            const us="Admin"
+            const pas="SecretPass"
+            if(uval==us && pval==pas){
+                window.location.href="Home.html"
+            }
+            else{
+                alert("Wrong Password or user Name")
+            }
+           
+        })
+    </script>
+</body>
+</html>
