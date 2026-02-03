@@ -4,15 +4,7 @@
     box-sizing: border-box;
     font-family: "Segoe UI", Arial, sans-serif;
 }
-/* .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background: linear-gradient(135deg, #6C63FF, #5848E5);
-    color: white;
-    padding: 15px 30px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.15);
-} */
+
 .navbar {
     position: fixed;
     top: 0;
@@ -53,23 +45,6 @@
     position: relative;
 }
 
-/* ===== NAVBAR SEARCH ===== */
-/* .nav-search {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    padding: 0 30px;
-} */
-
-/* .nav-search input {
-    width: 100%;
-    max-width: 500px;
-    padding: 10px 16px;
-    border-radius: 12px;
-    border: none;
-    font-size: 14px;
-    outline: none;
-} */
 
 .nav-search input:focus {
     box-shadow: 0 0 0 2px rgba(255,255,255,0.4);
@@ -92,7 +67,6 @@
 }
 
 
-/* underline hover */
 .nav-links a::after {
     content: "";
     position: absolute;
@@ -110,8 +84,8 @@
 
 #search-suggestion {
     position: fixed;
-    top: 60px;              /* below navbar */
-    left: 260px;            /* after sidebar */
+    top: 60px;             
+    left: 260px;            
     background: white;
     padding: 10px 15px;
     border-radius: 8px;
@@ -123,30 +97,20 @@
 }
 
 
-/* ===== LAYOUT ===== */
 .container {
     background-color: #F5F7FB;
 }
-
-/* only sidebar layouts use flex */
 .container.has-sidebar {
     display: flex;
-    margin-top: 60px;     /* navbar height */
+    margin-top: 60px;     
     margin-left: 220px; 
 }
 
 
-/* ===== SIDEBAR ===== */
-/* .sidebar {
-    width: 220px;
-    background: #FFFFFF;
-    padding: 25px 20px;
-    height: calc(100vh - 60px);
-    box-shadow: 4px 0 15px rgba(0,0,0,0.05);
-} */
+
  .sidebar {
     position: fixed;
-    top: 60px;              /* height of navbar */
+    top: 60px;            
     left: 0;
 
     width: 220px;
@@ -155,7 +119,7 @@
     background: #FFFFFF;
     padding: 25px 20px;
 
-    overflow-y: auto;       /* scroll if content grows */
+    overflow-y: auto;      
     box-shadow: 4px 0 15px rgba(0,0,0,0.05);
     z-index: 900;
 }
@@ -192,7 +156,6 @@
     color: #6C63FF;
 }
 
-/* Active category highlight */
 .sidebar a.active-category {
     background: #6C63FF;
     color: white;
@@ -202,13 +165,11 @@
 .sidebar a.active-category:hover {
     background: #5848E5;
 }
-/* ===== PRICE FILTER (CUSTOM RADIO) ===== */
 
 .price-filter {
     margin-top: 12px;
 }
 
-/* Label container */
 .radio-item {
     display: flex;
     align-items: center;
@@ -220,12 +181,10 @@
     user-select: none;
 }
 
-/* Hide default radio */
 .radio-item input {
     display: none;
 }
 
-/* Custom radio circle */
 .custom-radio {
     width: 18px;
     height: 18px;
@@ -235,7 +194,6 @@
     transition: all 0.25s ease;
 }
 
-/* Inner dot (checked state) */
 .custom-radio::after {
     content: "";
     width: 10px;
@@ -249,26 +207,18 @@
     transition: transform 0.25s ease;
 }
 
-/* Checked */
 .radio-item input:checked + .custom-radio::after {
     transform: translate(-50%, -50%) scale(1);
 }
 
-/* Checked border glow */
 .radio-item input:checked + .custom-radio {
     box-shadow: 0 0 8px rgba(108, 99, 255, 0.6);
 }
-
-/* Hover effect */
 .radio-item:hover .custom-radio {
     background: rgba(108, 99, 255, 0.08);
 }
 
 
-/* ===== PRODUCTS ===== */
-
-
-/* ===== PRODUCT CARD ===== */
 
 .product-card:hover {
     transform: translateY(-6px);
@@ -327,19 +277,16 @@
     background: #5848E5;
 }
 
-/* Highlight searched product */
 .highlight-product {
     border: 3px solid #6C63FF;
     box-shadow: 0 0 25px rgba(108, 99, 255, 0.6);
     transform: scale(1.05);
 }
 
-/* Smooth highlight animation */
 .product-card {
     transition: transform 0.4s ease, box-shadow 0.4s ease;
 }
 
-/* ===== CONTACT PAGE ===== */
 .container-cart {
     max-width: 500px;
     
@@ -358,7 +305,6 @@
     color: #6C63FF;
 }
 
-/* ===== FORM ===== */
 form {
     display: flex;
     flex-direction: column;
@@ -386,7 +332,6 @@ form textarea:focus {
     box-shadow: 0 0 0 2px rgba(108,99,255,0.15);
 }
 
-/* ===== BUTTON ===== */
 form button {
     padding: 12px;
     border-radius: 10px;
@@ -403,7 +348,6 @@ form button:hover {
     box-shadow: 0 10px 20px rgba(108,99,255,0.4);
 }
 
-/* ===== CART PAGE ===== */
 .container-cart {
     max-width: 900px;
     margin: 40px auto;
@@ -413,14 +357,12 @@ form button:hover {
     box-shadow: 0 12px 30px rgba(0,0,0,0.1);
 }
 
-/* Heading */
 .container h2 {
     text-align: center;
     margin-bottom: 25px;
     color: #6C63FF;
 }
 
-/* ===== CART ITEMS ===== */
 #cart-items {
     display: flex;
     flex-direction: column;
@@ -438,7 +380,6 @@ form button:hover {
     background: #F5F7FB;
 }
 
-/* Product image */
 .cart-item img {
     width: 70px;
     height: 70px;
@@ -446,13 +387,11 @@ form button:hover {
     border-radius: 10px;
 }
 
-/* Name & price */
 .cart-item p {
     font-size: 14px;
     color: #333;
 }
 
-/* Remove button */
 .cart-item button {
     padding: 8px 10px;
     border-radius: 8px;
@@ -467,14 +406,12 @@ form button:hover {
     background: #E64444;
 }
 
-/* ===== TOTAL ===== */
 .container-cart h3 {
     text-align: right;
     margin-bottom: 20px;
     font-size: 18px;
 }
 
-/* ===== BUY NOW BUTTON ===== */
 .container-cart > button {
     width: 100%;
     padding: 14px;
@@ -492,14 +429,12 @@ form button:hover {
     box-shadow: 0 10px 20px rgba(108,99,255,0.4);
 }
 
-/* ===== EMPTY CART MESSAGE ===== */
 #cart-items p {
     text-align: center;
     font-size: 16px;
     color: #777;
 }
 
-/* ===== CHECKOUT MODAL ===== */
 .checkout-modal {
     position: fixed;
     top: 50%;
@@ -521,7 +456,6 @@ form button:hover {
     color: #6C63FF;
 }
 
-/* Modal inputs */
 .checkout-modal input {
     width: 100%;
     padding: 12px;
@@ -534,8 +468,6 @@ form button:hover {
 .checkout-modal input:focus {
     border-color: #6C63FF;
 }
-
-/* Modal buy button */
 .checkout-modal button {
     width: 100%;
     padding: 12px;
@@ -547,7 +479,6 @@ form button:hover {
     cursor: pointer;
 }
 
-/* Close button */
 .close-btn {
     position: absolute;
     top: 10px;
@@ -560,8 +491,6 @@ form button:hover {
 .close-btn:hover {
     color: #000;
 }
-
-/* Thank you modal text */
 #thank-you p {
     text-align: center;
     margin: 15px 0 25px;
@@ -572,10 +501,6 @@ form button:hover {
     background: #5848E5;
 }
 
-/* ===== PRODUCTS GRID ===== */
-
-
-/* Responsive */
 @media (max-width: 1200px) {
     .product {
         grid-template-columns: repeat(4, 1fr);
